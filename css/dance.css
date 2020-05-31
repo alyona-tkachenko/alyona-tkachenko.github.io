@@ -1,0 +1,76 @@
+section {
+    position: relative;
+}
+
+.dance {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.dance img {
+    position: absolute;
+    left:0;
+    top:0;
+    object-fit: cover;
+    object-position: center bottom;
+    width: 100%;
+    height: 100%;
+}
+
+section .dance img:nth-child(2) {
+    z-index:1;
+}
+
+section .dance img:nth-child(3) {
+    z-index:3;
+}
+
+section .overlay {
+    z-index:1;
+}
+
+section .slider {
+    z-index: 2;
+    opacity: 0;
+}
+
+section[data-scroll="in"] .slider {
+    transition-delay: 1.7s;
+    transition-duration: 1.5s;
+    transition-property: all;
+    opacity: 1;
+}
+
+section[data-scroll="in"] .dance img:nth-child(3) {
+    transition-delay: 2.3s;
+    transition-duration: 2.3s;
+    transition-property: all;
+    opacity:0;
+    z-index:1;
+}
+
+@keyframes dance {
+  from {
+    -webkit-transform:scaleY(1);
+    transform:scaleY(1);
+  }
+  to {
+    -webkit-transform:scaleY(1.02);
+    transform:scaleY(1.02);  
+  }
+  
+}
+
+#s1[data-scroll="in"] .dance img:first-child,
+[data-scroll="in"] .dance img:first-child {
+    -webkit-animation-name: dance;
+    animation-name: dance;
+    animation-iteration-count:12;
+    animation-delay: .5s;
+    animation-duration: .35s;
+}

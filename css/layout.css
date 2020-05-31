@@ -1,0 +1,321 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    position: relative;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .05em;
+    line-height: 1;
+    margin-bottom: 0.25em;
+
+}
+
+.slider .item {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Якщо потрібно інакше позиціонувати ілюстрацію */
+/* (стосується в першу чергу телефонів) */
+/* додавайте додатковий клас в html */
+/* і описуйте в css інакше позиціонування */
+.slider .item.pos-bottom img {
+    object-position: center bottom;
+}
+
+.slider .item.pos-left img {
+    object-position: left center;
+}
+
+.text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    background-image: url(../img/noise5.jpg);
+/*    z-index: 3;*/
+}
+
+section .overlay[data-scroll="in"] {
+    animation: animate 1s steps(5) infinite;
+}
+
+#s4 {
+    background-color: #000;
+}
+
+section .overlay2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.15;
+    background-image: url(../img/noise5.jpg);
+/*    animation: animate 1s steps(3) infinite;*/
+    z-index: 3;
+}
+
+section .box-festival {
+    position: relative;
+    z-index: 5;
+    margin: auto;
+    padding: 0 25px 25px 25px;
+
+}
+
+#s1 {
+    background-image: url(../img/1.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+
+}
+
+.container .left {
+    width: 45%;
+}
+
+.container .right {
+    padding-top: 10px;
+    width: 55%;
+    padding-left: 40px;
+}
+
+h3 {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 800;
+    font-size: 2.7rem;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.2rem;
+}
+
+.headliner{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.guest  {
+    margin:0;
+    padding: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 0.5;
+    transition: all 0.5s ease-in;
+    transform-origin: left;
+
+}
+.guest:hover {
+   transform: scale(1.5) ;
+     -webkit-text-stroke: 0.5px;
+    -webkit-text-fill-color: transparent;
+        cursor: default;
+}
+
+
+.dates {
+    text-transform: inherit;
+    text-decoration: none;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1;
+    white-space:nowrap;
+    overflow:hidden;
+    margin-bottom: 0.75em;
+/*    animation: typing 4s steps(23,end) forwards ;*/
+/*    animation-iteration-count:infinite;*/
+}
+
+@keyframes typing {
+  0% { width:0% }
+  100% { width:100% }
+}
+
+.description {
+    text-transform:inherit;
+    text-decoration: none;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    color: white;
+    max-width: 500px;
+    margin-bottom: 2em;
+    
+}
+
+.button a {
+    display: inline-block;
+    border: 3px solid;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease-out;
+    transform-origin: left;
+    text-transform: uppercase;   
+}
+
+
+.button a:hover {
+    transform: scale(1.1);
+    animation: none;
+}
+
+
+.fullscreen-video-wrap {
+    display:flex;
+    justify-content: center center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    filter: grayscale(1) contrast(120%);
+    overflow: hidden;}
+
+    
+ #s5 {
+  	margin: 0;
+  	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+
+    section .box-festival, header .box {
+       max-width: 500px;
+
+    }
+
+    .container .right,
+    .container .left {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .container {
+        justify-content: center;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+
+    }
+    
+    .headliner{
+    display: inline-flex;
+    flex-direction:row;
+      max-width: 700 px;
+        flex-wrap: wrap;
+        break-after: avoid-region;
+    }
+    .guest {
+        transform: none;
+        padding-right: 4%;
+        line-height: 1rem;
+        font-size: 1em; 
+    }
+    
+    .guest:hover {
+        display: none;
+    }
+    
+header h1 {
+         font-size: 4rem;
+    }
+    
+    .button a {
+        display:block;
+       margin-left: 25%;
+           margin-right: 35%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .container .description {
+        display: none;
+    }
+}

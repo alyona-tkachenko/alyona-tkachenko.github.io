@@ -1,0 +1,96 @@
+nav {
+    position: fixed;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #0009;
+    z-index: 9999;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+nav li a {
+    position: relative;
+    color: whitesmoke;
+    display: block;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 20px;
+
+}
+
+.root {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+
+}
+
+.root:hover .dropdown {
+    display: block;
+}
+
+.dropdown  {
+    display: none;
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+    width: 250px;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #c7ff00;
+    background: #0009;
+    text-align: right;
+}
+
+.root.june { color:#c7ff00; }
+.root.june .dropdown { color:#c7ff00; }
+.root.july { color:#ff4aff; }
+.root.july .dropdown { color:#ff4aff; }
+.root.august { color:#00ffff; }
+.root.august .dropdown { color:#00ffff; }
+
+.dropdown > li {
+    cursor: pointer;
+    list-style: none;
+
+}
+
+.dropdown > li:hover {
+    color: white;
+}
+
+nav li:nth-child(1) a:hover {
+    color: #c7ff00;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-fill-color: transparent;
+}
+
+nav li:nth-child(2) a:hover {
+    color: #ff4aff;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-fill-color: transparent;
+}
+
+nav li:nth-child(3) a:hover {
+    color: #00ffff;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-fill-color: transparent;
